@@ -8,5 +8,7 @@ Simple setup for a browserbased WSI Viewer
    2. in this file set FilesystemSource.BasicLookupStrategy.path_prefix to a folder path containing your CMU-1.tiff from Step 1.
    3. save file as cantaloupe.properties
   
-3. Open a terminal in your cantaloupe-directory and type 
+3. Open a terminal in your cantaloupe-directory and run
     `java -Dcantaloupe.config=/path/to/cantaloupe.properties -Xmx2g -jar cantaloupe-x.x.x.war`
+4. Open http://localhost:8182/iiif/2/CMU-1.tiff/0,0,200,200/full/0/default.jpg in your preferred browser
+5. Open http://localhost:8182/iiif/2/CMU-1.tiff/info.json in another tab of your browser
