@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<style>
+title {text-align: center;}
+div {text-align: center;}
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <title>OpenSeadragon WSI Viewer</title>
+</head>
+
+<body>
+    <div class="viewerarea">
+      <div class="viewerheading">
+        <h1>OpenSeadragon WSI Viewer</h1>
+      </div>
+      <div id="openseadragon-wsi-viewer" class="openseadragon">
+        <div class="openseadragon-container" style="background: transparent none repeat scroll 0% 0%; border: me...0%; overflow: hidden; left: 0px; top: 0px; text-align: center;>
+          <div class="openseadragon-canvas" style="background: transparent none repeat scroll 0% 0%; border: me...; top: 0px; left: 0px; touch-action: none; text-align: center;" tabindex="0" dir="ltr">
+            <canvas style="background: transparent none repeat scroll 0% 0%; border: me...padding: 0px; postition: absolute; width: 100%; height: 100%;" width="800" height="600"></canvas>
+            <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding:0px; postition: static;"></div>
+         </div>  
+        </div>
+  
+      <script type="text/javascript">
+        OpenSeadragon({
+          preserveViewport: true,
+          visibilityRatio:    1,
+          minZoomLevel:       1,
+          defaultZoomLevel:   1,
+          sequenceMode:       true,
+          tileSources:   [{
+            "@context": "http://iiif.io/api/image/2/context.json",
+            "@id": "http://localhost:8182/iiif/2/CMU-1.tiff",
+            "height": 32914,
+            "width": 46000,
+            "profile": [ "http://iiif.io/api/image/2/level2.json" ],
+            "protocol": "http://iiif.io/api/image",
+            "tiles": [{
+              "scaleFactors": [ 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 ],
+              "width": 512,
+              "height": 512
+            }]
+          }]
+        });
+      </script>  
+    </div>  
+</body>
