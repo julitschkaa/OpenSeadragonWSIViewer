@@ -2,7 +2,7 @@
 <html>
 <style>
 title {text-align: center;}
-div {text-align: center;}
+body {text-align: center;}
 </style>
 
 <head>
@@ -16,11 +16,12 @@ div {text-align: center;}
     <div class="viewerheading">
         <h1>OpenSeadragon WSI Viewer</h1>
     </div>
-    <div id="openseadragon1" style="width: 600px; height: 600px;"></div>
+    <div id="openseadragon1" style="width: 600px; height: 600px; margin:0 auto;" ></div>
     <script type="text/javascript">
       var viewer = OpenSeadragon({
           id: "openseadragon1",
           preserveViewport: true,
+          showNavigator:  true,
           visibilityRatio:    1,
           minZoomLevel:       1,
           defaultZoomLevel:   1,
@@ -28,8 +29,8 @@ div {text-align: center;}
           tileSources:   [{
             "@context": "http://iiif.io/api/image/2/context.json",
             "@id": "http://localhost:8182/iiif/2/CMU-1.tiff",
-            "height": 7200,
-            "width": 5233,
+            "height": 32914,
+            "width": 46000,
             "profile": [ "http://iiif.io/api/image/2/level2.json" ],
             "protocol": "http://iiif.io/api/image",
             "tiles": [{
